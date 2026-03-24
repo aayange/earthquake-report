@@ -1,11 +1,7 @@
 ---
-title: "earthquake-report"
+title: "Earthquake Report"
 ---
 
-This is a Quarto website.
+This site tracks global earthquake activity using data from the [USGS Earthquake Hazards Program](https://earthquake.usgs.gov). It updates daily and covers all earthquakes of magnitude 4.5 or greater worldwide over the past 30 days.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+See the [Report](report.qmd) page for the full analysis, including maps, charts, and summary statistics.
