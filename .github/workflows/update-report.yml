@@ -28,6 +28,9 @@ jobs:
       - name: Run pipeline
         run: Rscript run-all.R
 
+      - name: Render site
+        run: quarto render
+
       - name: Create gh-pages branch if needed
         run: |
           git config user.name "github-actions"
@@ -44,5 +47,6 @@ jobs:
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
