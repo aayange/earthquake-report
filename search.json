@@ -9,8 +9,57 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "earthquake-report",
+    "title": "Earthquake Report",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This site tracks global earthquake activity using data from the USGS Earthquake Hazards Program. It updates daily and covers all earthquakes of magnitude 4.5 or greater worldwide over the past 30 days.\nSee the Report page for the full analysis, including maps, charts, and summary statistics."
+  },
+  {
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "Global Earthquake Activity",
+    "section": "",
+    "text": "library(tidyverse)\n\nclean &lt;- read_csv(\"data/clean/earthquakes-clean.csv\",\n                   show_col_types = FALSE)\n\nstrongest &lt;- clean |&gt; slice_max(mag, n = 1)"
+  },
+  {
+    "objectID": "report.html#summary",
+    "href": "report.html#summary",
+    "title": "Global Earthquake Activity",
+    "section": "Summary",
+    "text": "Summary\nIn the past 30 days, USGS recorded 505 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.5 event near 166 km W of Neiafu, Tonga on March 24, 2026. The median magnitude was 4.8, and 15 earthquakes reached magnitude 6.0 or higher."
+  },
+  {
+    "objectID": "report.html#strongest-earthquakes",
+    "href": "report.html#strongest-earthquakes",
+    "title": "Global Earthquake Activity",
+    "section": "Strongest Earthquakes",
+    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nMar 24\n7.5\n229 km\n166 km W of Neiafu, Tonga\n\n\nMar 21\n6.6\n10 km\nnorthern Mid-Atlantic Ridge\n\n\nMar 20\n6.6\n5 km\nSouth Shetland Islands\n\n\nMar 04\n6.4\n10 km\n223 km ESE of Attu Station, Alaska\n\n\nMar 22\n6.3\n10 km\n144 km NE of Hihifo, Tonga\n\n\nMar 13\n6.3\n10 km\n85 km W of Vallenar, Chile\n\n\nMar 06\n6.3\n9 km\n181 km SE of Kirakira, Solomon Islands\n\n\nMar 01\n6.3\n579 km\nFiji region\n\n\nMar 22\n6.2\n10 km\n149 km SSW of Lotofagā, Samoa\n\n\nMar 22\n6.2\n10 km\n102 km NE of Hihifo, Tonga\n\n\nMar 03\n6.2\n18 km\n62 km SE of Sinabang, Indonesia"
+  },
+  {
+    "objectID": "report.html#earthquakes-over-time",
+    "href": "report.html#earthquakes-over-time",
+    "title": "Global Earthquake Activity",
+    "section": "Earthquakes Over Time",
+    "text": "Earthquakes Over Time\n\ndaily &lt;- clean |&gt;\n  count(date)\n\nggplot(daily, aes(x = date, y = n)) +\n  geom_col(fill = \"#2c3e50\", alpha = 0.8) +\n  labs(\n    title = \"Earthquakes Per Day (M4.5+)\",\n    x = NULL,\n    y = \"Count\"\n  ) +\n  theme_minimal(base_size = 13)"
+  },
+  {
+    "objectID": "report.html#magnitude-distribution",
+    "href": "report.html#magnitude-distribution",
+    "title": "Global Earthquake Activity",
+    "section": "Magnitude Distribution",
+    "text": "Magnitude Distribution\n\nggplot(clean, aes(x = mag)) +\n  geom_histogram(binwidth = 0.2, fill = \"#1f9ac9\", color = \"white\") +\n  labs(\n    title = \"Magnitude Distribution\",\n    x = \"Magnitude\",\n    y = \"Count\"\n  ) +\n  theme_minimal(base_size = 13)"
+  },
+  {
+    "objectID": "report.html#where-they-happened",
+    "href": "report.html#where-they-happened",
+    "title": "Global Earthquake Activity",
+    "section": "Where They Happened",
+    "text": "Where They Happened\n\nworld &lt;- map_data(\"world\")\n\nggplot() +\n  geom_polygon(\n    data = world,\n    aes(x = long, y = lat, group = group),\n    fill = \"grey90\", color = \"grey80\", linewidth = 0.2\n  ) +\n  geom_point(\n    data = clean,\n    aes(x = longitude, y = latitude, size = mag, color = mag),\n    alpha = 0.6\n  ) +\n  scale_color_viridis_c(option = \"inferno\", end = 0.9) +\n  scale_size_continuous(range = c(0.5, 4)) +\n  labs(\n    title = \"Global Earthquake Locations (Past 30 Days, M4.5+)\",\n    color = \"Magnitude\",\n    size = \"Magnitude\"\n  ) +\n  coord_fixed(1.3) +\n  theme_void(base_size = 13) +\n  theme(legend.position = \"bottom\")"
+  },
+  {
+    "objectID": "report.html#most-active-regions",
+    "href": "report.html#most-active-regions",
+    "title": "Global Earthquake Activity",
+    "section": "Most Active Regions",
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nJapan\n61\n\n\nRussia\n54\n\n\nIndonesia\n39\n\n\nTonga\n28\n\n\nChile\n22\n\n\nAlaska\n19\n\n\nPapua New Guinea\n15\n\n\nPhilippines\n13\n\n\nsouth of the Kermadec Islands\n13\n\n\nPeru\n12"
   }
 ]
