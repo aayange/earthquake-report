@@ -18,7 +18,7 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 541 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.5 event near 166 km W of Neiafu, Tonga on March 24, 2026. The median magnitude was 4.8, and 14 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 536 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.5 event near 166 km W of Neiafu, Tonga on March 24, 2026. The median magnitude was 4.8, and 14 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
@@ -53,7 +53,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n102\n\n\nJapan\n43\n\n\nTonga\n38\n\n\nRussia\n27\n\n\nMid-Indian Ridge\n25\n\n\nVanuatu\n18\n\n\nsouth of the Kermadec Islands\n18\n\n\nPapua New Guinea\n17\n\n\nGreece\n14\n\n\nChile\n13"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n108\n\n\nJapan\n44\n\n\nTonga\n36\n\n\nRussia\n26\n\n\nMid-Indian Ridge\n25\n\n\nVanuatu\n18\n\n\nPapua New Guinea\n16\n\n\nAlaska\n13\n\n\nChile\n13\n\n\nGreece\n13"
   },
   {
     "objectID": "about.html",
