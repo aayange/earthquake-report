@@ -11,7 +11,7 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 419 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 6.9 event near 33 km ENE of Calama, Chile on May 25, 2026. The median magnitude was 4.7, and 9 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 422 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 6.9 event near 33 km ENE of Calama, Chile on May 25, 2026. The median magnitude was 4.7, and 9 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n37\n\n\nPapua New Guinea\n29\n\n\nJapan\n26\n\n\nChile\n21\n\n\nAlaska\n17\n\n\nPhilippines\n17\n\n\nVanuatu\n17\n\n\nTonga\n16\n\n\nSouth Sandwich Islands region\n15\n\n\nRussia\n13"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n36\n\n\nPapua New Guinea\n29\n\n\nJapan\n25\n\n\nChile\n22\n\n\nPhilippines\n20\n\n\nVanuatu\n18\n\n\nTonga\n17\n\n\nRussia\n16\n\n\nAlaska\n15\n\n\nSouth Sandwich Islands region\n15"
   },
   {
     "objectID": "about.html",
