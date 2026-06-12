@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPhilippines\n85\n\n\nIndonesia\n41\n\n\nRussia\n26\n\n\nTonga\n21\n\n\nVanuatu\n21\n\n\nChile\n20\n\n\nJapan\n20\n\n\nPapua New Guinea\n20\n\n\nAlaska\n13\n\n\nSouth Sandwich Islands region\n13"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPhilippines\n88\n\n\nIndonesia\n40\n\n\nRussia\n26\n\n\nVanuatu\n24\n\n\nPapua New Guinea\n20\n\n\nChile\n19\n\n\nJapan\n19\n\n\nTonga\n18\n\n\nAlaska\n13\n\n\nChina\n11"
   },
   {
     "objectID": "about.html",
