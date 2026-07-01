@@ -11,7 +11,7 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 572 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.8 event near 24 km SW of Kablalan, Philippines on June 07, 2026. The median magnitude was 4.8, and 20 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 574 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.8 event near 24 km SW of Kablalan, Philippines on June 07, 2026. The median magnitude was 4.8, and 21 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPhilippines\n151\n\n\nIndonesia\n44\n\n\nRussia\n40\n\n\nJapan\n25\n\n\nTonga\n20\n\n\nChina\n17\n\n\nJapan region\n16\n\n\nPapua New Guinea\n16\n\n\nChile\n13\n\n\nsouth of the Fiji Islands\n11"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPhilippines\n155\n\n\nIndonesia\n45\n\n\nRussia\n41\n\n\nJapan\n27\n\n\nTonga\n19\n\n\nChina\n18\n\n\nPapua New Guinea\n17\n\n\nJapan region\n14\n\n\nsouth of the Fiji Islands\n12\n\n\nChile\n11"
   },
   {
     "objectID": "about.html",
