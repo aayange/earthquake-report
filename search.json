@@ -25,14 +25,14 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 557 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.5 event near 20 km ESE of Yumare, Venezuela on June 24, 2026. The median magnitude was 4.8, and 15 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 558 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.3 event near 58 km WSW of Puerto Madero, Mexico on July 17, 2026. The median magnitude was 4.8, and 13 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
     "href": "report.html#strongest-earthquakes",
     "title": "Global Earthquake Activity",
     "section": "Strongest Earthquakes",
-    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nJun 24\n7.5\n10 km\n20 km ESE of Yumare, Venezuela\n\n\nJul 17\n7.3\n19 km\n58 km WSW of Puerto Madero, Mexico\n\n\nJun 24\n7.2\n28 km\n21 km ENE of San Felipe, Venezuela\n\n\nJun 24\n6.9\n34 km\n33 km ENE of Noda, Japan\n\n\nJun 26\n6.5\n42 km\n44 km SW of Balangonan, Philippines\n\n\nJul 17\n6.4\n10 km\n86 km WSW of Puerto Madero, Mexico\n\n\nJul 13\n6.4\n10 km\n191 km SE of Lorengau, Papua New Guinea\n\n\nJul 11\n6.4\n26 km\nSouth Sandwich Islands region\n\n\nJul 13\n6.3\n16 km\nsoutheast of the Loyalty Islands\n\n\nJul 14\n6.2\n46 km\n32 km WSW of Sarangani, Philippines\n\n\nJul 03\n6.2\n121 km\n58 km W of Tobelo, Indonesia"
+    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nJul 17\n7.3\n19 km\n58 km WSW of Puerto Madero, Mexico\n\n\nJun 26\n6.5\n42 km\n44 km SW of Balangonan, Philippines\n\n\nJul 17\n6.4\n10 km\n86 km WSW of Puerto Madero, Mexico\n\n\nJul 13\n6.4\n10 km\n191 km SE of Lorengau, Papua New Guinea\n\n\nJul 11\n6.4\n26 km\nSouth Sandwich Islands region\n\n\nJul 13\n6.3\n16 km\nsoutheast of the Loyalty Islands\n\n\nJul 14\n6.2\n46 km\n32 km WSW of Sarangani, Philippines\n\n\nJul 03\n6.2\n121 km\n58 km W of Tobelo, Indonesia\n\n\nJul 03\n6.1\n10 km\n136 km NNE of Hirara, Japan\n\n\nJun 27\n6.1\n199 km\n47 km S of Jurm, Afghanistan"
   },
   {
     "objectID": "report.html#earthquakes-over-time",
@@ -60,6 +60,6 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n56\n\n\nPhilippines\n56\n\n\nMexico\n46\n\n\nJapan\n31\n\n\nVanuatu\n21\n\n\nChile\n19\n\n\nChina\n19\n\n\nSouth Sandwich Islands region\n19\n\n\nRussia\n17\n\n\nAlaska\n15"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPhilippines\n56\n\n\nIndonesia\n55\n\n\nMexico\n49\n\n\nJapan\n29\n\n\nVanuatu\n25\n\n\nChile\n20\n\n\nChina\n19\n\n\nSouth Sandwich Islands region\n18\n\n\nRussia\n17\n\n\nAlaska\n15"
   }
 ]
