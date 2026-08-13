@@ -25,14 +25,14 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 662 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.4 event near 5 km S of San José del Palmar, Colombia on August 10, 2026. The median magnitude was 4.8, and 10 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 651 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.4 event near 5 km S of San José del Palmar, Colombia on August 10, 2026. The median magnitude was 4.8, and 9 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
     "href": "report.html#strongest-earthquakes",
     "title": "Global Earthquake Activity",
     "section": "Strongest Earthquakes",
-    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nAug 10\n7.4\n110 km\n5 km S of San José del Palmar, Colombia\n\n\nJul 17\n7.3\n22 km\n52 km W of Puerto Madero, Mexico\n\n\nJul 28\n6.8\n10 km\nThe 2026 Kumamoto Region, Japan Earthquake\n\n\nJul 17\n6.4\n10 km\n96 km SW of Puerto Madero, Mexico\n\n\nAug 05\n6.3\n226 km\nsouth of the Kermadec Islands\n\n\nAug 05\n6.3\n10 km\n32 km SW of Sarangani, Philippines\n\n\nJul 13\n6.3\n16 km\nsoutheast of the Loyalty Islands\n\n\nJul 14\n6.2\n47 km\n32 km WSW of Sarangani, Philippines\n\n\nAug 12\n6.0\n10 km\nSouth Sandwich Islands region\n\n\nJul 24\n6.0\n15 km\n55 km W of Sola, Vanuatu"
+    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\n\n\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nAug 10\n7.4\n110 km\n5 km S of San José del Palmar, Colombia\n\n\nJul 17\n7.3\n22 km\n52 km W of Puerto Madero, Mexico\n\n\nJul 28\n6.8\n10 km\nThe 2026 Kumamoto Region, Japan Earthquake\n\n\nJul 17\n6.4\n10 km\n96 km SW of Puerto Madero, Mexico\n\n\nAug 05\n6.3\n226 km\nsouth of the Kermadec Islands\n\n\nAug 05\n6.3\n10 km\n32 km SW of Sarangani, Philippines\n\n\nJul 14\n6.2\n47 km\n32 km WSW of Sarangani, Philippines\n\n\nAug 12\n6.0\n10 km\nSouth Sandwich Islands region\n\n\nJul 24\n6.0\n15 km\n55 km W of Sola, Vanuatu\n\n\nJul 30\n5.9\n35 km\n247 km NNE of Colonia, Micronesia\n\n\nJul 29\n5.9\n10 km\nKermadec Islands region\n\n\nJul 28\n5.9\n35 km\n50 km WSW of Brisas Barra de Suchiate, Mexico\n\n\nJul 16\n5.9\n74 km\n44 km NNW of Te Anau, New Zealand"
   },
   {
     "objectID": "report.html#earthquakes-over-time",
@@ -60,6 +60,6 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nMexico\n72\n\n\nPhilippines\n62\n\n\nIndonesia\n58\n\n\nJapan\n33\n\n\nRussia\n28\n\n\nsouthern Mid-Atlantic Ridge\n23\n\n\nKermadec Islands region\n21\n\n\nsouth of Tonga\n21\n\n\nPapua New Guinea\n19\n\n\nAlaska\n16"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nMexico\n72\n\n\nIndonesia\n59\n\n\nPhilippines\n58\n\n\nJapan\n32\n\n\nRussia\n29\n\n\nKermadec Islands region\n23\n\n\nsouthern Mid-Atlantic Ridge\n23\n\n\nsouth of Tonga\n21\n\n\nPapua New Guinea\n20\n\n\nChile\n16"
   }
 ]
