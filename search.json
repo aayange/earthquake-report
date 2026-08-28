@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n196\n\n\nPhilippines\n67\n\n\nJapan\n42\n\n\nKermadec Islands region\n30\n\n\nRussia\n26\n\n\nPapua New Guinea\n21\n\n\nTonga\n17\n\n\nsouth of Tonga\n16\n\n\nChina\n14\n\n\nMexico\n10"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n199\n\n\nPhilippines\n61\n\n\nJapan\n41\n\n\nKermadec Islands region\n31\n\n\nRussia\n28\n\n\nPapua New Guinea\n23\n\n\nTonga\n17\n\n\nChina\n14\n\n\nsouth of Tonga\n12\n\n\nChile\n10"
   },
   {
     "objectID": "about.html",
