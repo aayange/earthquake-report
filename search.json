@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Earthquake Report",
-    "section": "",
-    "text": "This site tracks global earthquake activity using data from the USGS Earthquake Hazards Program. It updates daily and covers all earthquakes of magnitude 4.5 or greater worldwide over the past 30 days.\nSee the Report page for the full analysis, including maps, charts, and summary statistics."
-  },
-  {
     "objectID": "report.html",
     "href": "report.html",
     "title": "Global Earthquake Activity",
@@ -25,14 +11,14 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 502 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 6.5, 6.5 event near 169 km W of Nikolski, Alaska, 126 km NNE of Teluknaga, Indonesia on September 17, 2026, September 11, 2026. The median magnitude was 4.7, and 5 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 492 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 6.5, 6.5 event near 169 km W of Nikolski, Alaska, 126 km NNE of Teluknaga, Indonesia on September 17, 2026, September 11, 2026. The median magnitude was 4.7, and 5 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
     "href": "report.html#strongest-earthquakes",
     "title": "Global Earthquake Activity",
     "section": "Strongest Earthquakes",
-    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nSep 17\n6.5\n98 km\n169 km W of Nikolski, Alaska\n\n\nSep 11\n6.5\n372 km\n126 km NNE of Teluknaga, Indonesia\n\n\nSep 20\n6.4\n104 km\n49 km NNE of Kainantu, Papua New Guinea\n\n\nSep 03\n6.3\n35 km\n84 km SSW of Nikolski, Alaska\n\n\nSep 02\n6.2\n111 km\nSouth Sandwich Islands region\n\n\nSep 11\n5.9\n112 km\n253 km ENE of Lospalos, Timor Leste\n\n\nSep 02\n5.9\n10 km\nsouthern East Pacific Rise\n\n\nAug 27\n5.9\n10 km\n144 km N of Caluula, Somalia\n\n\nSep 23\n5.7\n10 km\n180 km NW of Hihifo, Tonga\n\n\nSep 20\n5.7\n10 km\nsouth of Africa"
+    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nSep 17\n6.5\n98 km\n169 km W of Nikolski, Alaska\n\n\nSep 11\n6.5\n372 km\n126 km NNE of Teluknaga, Indonesia\n\n\nSep 20\n6.4\n104 km\n49 km NNE of Kainantu, Papua New Guinea\n\n\nSep 03\n6.3\n35 km\n84 km SSW of Nikolski, Alaska\n\n\nSep 02\n6.2\n111 km\nSouth Sandwich Islands region\n\n\nSep 11\n5.9\n112 km\n253 km ENE of Lospalos, Timor Leste\n\n\nSep 02\n5.9\n10 km\nsouthern East Pacific Rise\n\n\nAug 27\n5.9\n10 km\n144 km N of Caluula, Somalia\n\n\nSep 23\n5.7\n10 km\n180 km NW of Hihifo, Tonga\n\n\nSep 20\n5.7\n10 km\nsouth of Africa\n\n\nSep 02\n5.7\n66 km\n163 km WSW of Abepura, Indonesia"
   },
   {
     "objectID": "report.html#earthquakes-over-time",
@@ -60,6 +46,20 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n78\n\n\nJapan\n33\n\n\nAlaska\n29\n\n\nVanuatu\n24\n\n\nColombia\n23\n\n\nPapua New Guinea\n20\n\n\nChile\n17\n\n\nPhilippines\n17\n\n\nTonga\n17\n\n\nRussia\n15"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n75\n\n\nJapan\n30\n\n\nAlaska\n29\n\n\nVanuatu\n24\n\n\nColombia\n23\n\n\nPapua New Guinea\n18\n\n\nChile\n16\n\n\nTonga\n16\n\n\nPhilippines\n15\n\n\nRussia\n15"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Earthquake Report",
+    "section": "",
+    "text": "This site tracks global earthquake activity using data from the USGS Earthquake Hazards Program. It updates daily and covers all earthquakes of magnitude 4.5 or greater worldwide over the past 30 days.\nSee the Report page for the full analysis, including maps, charts, and summary statistics."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]
