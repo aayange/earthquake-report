@@ -11,14 +11,14 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 622 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.7 event near 12 km WSW of Pitaloza Arriba, Panama on October 09, 2026. The median magnitude was 4.7, and 12 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 624 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.7 event near 12 km WSW of Pitaloza Arriba, Panama on October 09, 2026. The median magnitude was 4.7, and 13 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
     "href": "report.html#strongest-earthquakes",
     "title": "Global Earthquake Activity",
     "section": "Strongest Earthquakes",
-    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nOct 09\n7.7\n13 km\n12 km WSW of Pitaloza Arriba, Panama\n\n\nOct 13\n6.8\n10 km\ncentral Mid-Atlantic Ridge\n\n\nOct 13\n6.7\n10 km\ncentral Mid-Atlantic Ridge\n\n\nOct 09\n6.6\n24 km\n12 km W of Río Grande, Panama\n\n\nSep 25\n6.6\n10 km\n80 km ENE of Tadine, New Caledonia\n\n\nSep 17\n6.5\n98 km\n177 km W of Nikolski, Alaska\n\n\nSep 20\n6.4\n113 km\n50 km NNE of Kainantu, Papua New Guinea\n\n\nOct 08\n6.3\n10 km\n102 km NE of Norsup, Vanuatu\n\n\nOct 11\n6.2\n53 km\n79 km SSE of Panguna, Papua New Guinea\n\n\nOct 12\n6.1\n11 km\n17 km W of Río Grande, Panama"
+    "text": "Strongest Earthquakes\n\nclean |&gt;\n  slice_max(mag, n = 10) |&gt;\n  mutate(\n    date = format(date, \"%b %d\"),\n    depth = paste0(round(depth), \" km\"),\n    mag = round(mag, 1)\n  ) |&gt;\n  select(Date = date, Magnitude = mag, Depth = depth, Location = place) |&gt;\n  knitr::kable()\n\n\n\n\nDate\nMagnitude\nDepth\nLocation\n\n\n\n\nOct 09\n7.7\n13 km\n12 km WSW of Pitaloza Arriba, Panama\n\n\nOct 16\n6.9\n135 km\n76 km NE of Ozernovskiy, Russia\n\n\nOct 13\n6.8\n10 km\ncentral Mid-Atlantic Ridge\n\n\nOct 13\n6.7\n10 km\ncentral Mid-Atlantic Ridge\n\n\nOct 09\n6.6\n24 km\n12 km W of Río Grande, Panama\n\n\nSep 25\n6.6\n10 km\n80 km ENE of Tadine, New Caledonia\n\n\nSep 17\n6.5\n98 km\n177 km W of Nikolski, Alaska\n\n\nSep 20\n6.4\n113 km\n50 km NNE of Kainantu, Papua New Guinea\n\n\nOct 08\n6.3\n10 km\n102 km NE of Norsup, Vanuatu\n\n\nOct 11\n6.2\n53 km\n79 km SSE of Panguna, Papua New Guinea"
   },
   {
     "objectID": "report.html#earthquakes-over-time",
@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPanama\n67\n\n\nIndonesia\n66\n\n\nNew Caledonia\n54\n\n\nRussia\n38\n\n\nPapua New Guinea\n33\n\n\nJapan\n30\n\n\nPhilippines\n25\n\n\nTonga\n21\n\n\nColombia\n18\n\n\nChile\n16"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nIndonesia\n67\n\n\nPanama\n67\n\n\nNew Caledonia\n55\n\n\nRussia\n39\n\n\nPapua New Guinea\n32\n\n\nJapan\n28\n\n\nPhilippines\n27\n\n\nTonga\n22\n\n\nColombia\n16\n\n\nSouth Sandwich Islands region\n16"
   },
   {
     "objectID": "index.html",
