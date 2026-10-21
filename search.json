@@ -11,7 +11,7 @@
     "href": "report.html#summary",
     "title": "Global Earthquake Activity",
     "section": "Summary",
-    "text": "Summary\nIn the past 30 days, USGS recorded 652 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.7 event near 12 km WSW of Pitaloza Arriba, Panama on October 09, 2026. The median magnitude was 4.7, and 13 earthquakes reached magnitude 6.0 or higher."
+    "text": "Summary\nIn the past 30 days, USGS recorded 660 earthquakes of magnitude 4.5 or greater worldwide. The strongest was a magnitude 7.7 event near 12 km WSW of Pitaloza Arriba, Panama on October 09, 2026. The median magnitude was 4.7, and 13 earthquakes reached magnitude 6.0 or higher."
   },
   {
     "objectID": "report.html#strongest-earthquakes",
@@ -46,7 +46,7 @@
     "href": "report.html#most-active-regions",
     "title": "Global Earthquake Activity",
     "section": "Most Active Regions",
-    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nPanama\n77\n\n\nNew Caledonia\n75\n\n\nIndonesia\n64\n\n\nRussia\n42\n\n\nPapua New Guinea\n32\n\n\nPhilippines\n26\n\n\nVanuatu\n26\n\n\nJapan\n22\n\n\nTonga\n20\n\n\nSouth Sandwich Islands region\n16"
+    "text": "Most Active Regions\n\nclean |&gt;\n  count(region, sort = TRUE) |&gt;\n  slice_head(n = 10) |&gt;\n  rename(Region = region, Earthquakes = n) |&gt;\n  knitr::kable()\n\n\n\n\nRegion\nEarthquakes\n\n\n\n\nNew Caledonia\n80\n\n\nPanama\n80\n\n\nIndonesia\n62\n\n\nRussia\n41\n\n\nPapua New Guinea\n32\n\n\nVanuatu\n31\n\n\nPhilippines\n26\n\n\nJapan\n23\n\n\nTonga\n19\n\n\nSouth Sandwich Islands region\n16"
   },
   {
     "objectID": "about.html",
